@@ -4,7 +4,6 @@
  */
 package Ventanas;
 
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -122,12 +121,8 @@ public class Dev_Login extends javax.swing.JFrame {
     private void jIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIniciarSesionActionPerformed
     String usuario = jTextUsuario.getText();
     String contraseña = jPasswordField.getText();
-    
-    if (usuario.equals("Admin") || contraseña.equals("12345")) {
-        JOptionPane.showMessageDialog(null, "Bienvenido, usuario :)");
-    } else {
-        JOptionPane.showMessageDialog(null, "Datos incorrectos");
-    }
+
+    ValidadorLogin.validar(usuario, contraseña);
     
     }//GEN-LAST:event_jIniciarSesionActionPerformed
 
