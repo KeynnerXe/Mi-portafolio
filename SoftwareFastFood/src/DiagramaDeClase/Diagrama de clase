@@ -1,0 +1,36 @@
+@startuml
+title Diagrama de Clases - Aplicación de Comida Rápida
+
+class Pedido {
+  - descripcion : String
+  - direccion : String
+  - metodoPago : String
+  - total : double
+  - billete : double
+  - comentario : String
+  + getDescripcion() : String
+  + getDireccion() : String
+  + getMetodoPago() : String
+  + getTotal() : double
+  + getBillete() : double
+  + getComentario() : String
+  + calcularCambio() : double
+}
+
+class LogicaPedido {
+  + guardarPedido(pedido: Pedido) : void
+  + calcularCambio(pedido: Pedido) : double
+}
+
+class PedidoFrame {
+  - logicaPedido : LogicaPedido
+  - camposTexto : JTextField[]
+  - botonConfirmar : JButton
+  + mostrarTotal() : void
+  + eventosBotones() : void
+}
+
+PedidoFrame --> LogicaPedido
+LogicaPedido --> Pedido
+
+@enduml
