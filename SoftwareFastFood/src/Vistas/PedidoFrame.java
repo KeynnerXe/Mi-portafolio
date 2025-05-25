@@ -114,7 +114,7 @@ public class PedidoFrame extends JFrame {
             String comentario = txtComentario.getText().trim();
 
             if (descripcion.isEmpty() || direccion.isEmpty() || txtTotal.getText().trim().isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Por favor completa todos los campos obligatorios.");
+                JOptionPane.showMessageDialog(this, "Por favor completa todos los campos que son obligatorios.");
                 return;
             }
 
